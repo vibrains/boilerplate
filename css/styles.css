@@ -328,7 +328,7 @@ img {
 
 header.primary {
   background-color: #191919;
-  padding: 1rem 0;
+  padding: 0;
 }
 
 header.primary .container {
@@ -338,6 +338,10 @@ header.primary .container {
 .branding a {
   display: inline-block;
   max-width: 180px;
+}
+
+.branding img {
+  margin-top: -55px;
 }
 
 nav::before, nav::after {
@@ -368,6 +372,9 @@ nav a {
   color: #FFF;
   display: block;
   padding: 0 0.5rem;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 nav.primary {
@@ -375,7 +382,8 @@ nav.primary {
 }
 
 nav.primary > ul li {
-  margin-bottom: 0;
+  margin: 0;
+  padding-bottom: 15px;
 }
 
 nav.primary > ul li.active > a,
@@ -388,7 +396,7 @@ nav.utility {
 }
 
 nav.utility a {
-  font-size: 0.8rem;
+  font-size: 10px;
 }
 
 .mobile {
@@ -587,8 +595,8 @@ nav.utility a {
   -webkit-flex-basis: 70%;
           flex-basis: 70%;
   max-width: 70%;
-  -webkit-align-self: flex-start;
-          align-self: flex-start;
+  -webkit-align-self: flex-end;
+          align-self: flex-end;
 }
 
 .desktop .utilities {
@@ -681,6 +689,19 @@ main section:not(:last-child) {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
+}
+
+main section .services {
+  background: green;
+}
+
+main section .services p {
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 12px;
 }
 
 aside.primary {
@@ -1433,6 +1454,12 @@ nav.primary li.mega {
   nav.primary li.mega .dropdown .menu > *:last-child {
     padding-right: 0;
   }
+}
+
+nav.primary li.mega a {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .features > * {

@@ -22,7 +22,7 @@
  * Print Styles
  */
 
-@import "_components";
+ @import "_components";
 
 /* = Variables = */
 $font-stack: "Helvetica Neue", Arial, sans-serif;
@@ -188,7 +188,7 @@ $large: 1024px;
  *   - typographical elements: del, dfn, ins, kbd, mark, s, small, wbr
  *   - HTML5 elements: col, colgroup, details, dialog, map, menu, menuitem, summary
  */
-a, abbr, address, article, aside, audio, b, blockquote, body, button, canvas, caption, cite, code, datalist, dd, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, hr, i, iframe, img, input, label, legend, li, main, meter, nav, object, ol, option, p, pre, progress, q, section, select, span, strong, sub, sup, table, tbody, td, textarea, tfoot, th, thead, tr, u, ul, video {
+ a, abbr, address, article, aside, audio, b, blockquote, body, button, canvas, caption, cite, code, datalist, dd, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, hr, i, iframe, img, input, label, legend, li, main, meter, nav, object, ol, option, p, pre, progress, q, section, select, span, strong, sub, sup, table, tbody, td, textarea, tfoot, th, thead, tr, u, ul, video {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -258,7 +258,7 @@ img {
 
 header.primary {
     background-color: $charcoal;
-    padding: 1rem 0;
+    padding: 0;
     .container {
         position: static;
     }
@@ -268,6 +268,10 @@ header.primary {
     a {
         display: inline-block;
         max-width: 180px;
+    }
+
+    img {
+        margin-top: -55px;
     }
 }
 
@@ -285,6 +289,9 @@ nav {
         color: #FFF;
         display: block;
         padding: 0 0.5rem;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 }
 
@@ -292,7 +299,8 @@ nav.primary {
     margin-bottom: 0.7rem;
     > ul {
         li {
-            margin-bottom: 0;
+            margin: 0;
+            padding-bottom: 15px;
         }
         li.active,
         li:hover {
@@ -306,7 +314,7 @@ nav.primary {
 nav.utility {
     margin-bottom: 0.7rem;
     a {
-        font-size: 0.8rem;
+        font-size: 10px;
     }
 }
 
@@ -336,7 +344,7 @@ nav.utility {
     nav.primary {
         flex-basis: 70%;
         max-width: 70%;
-        align-self: flex-start;
+        align-self: flex-end;
     }
     .utilities {
         flex-basis: 30%;
@@ -400,6 +408,19 @@ main section {
         border-bottom: 1px solid $border;
         margin-bottom: 3rem;
         padding-bottom: 2rem;
+    }
+
+    .services {
+        background: green;
+
+        & p {
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 12px;
+        }
     }
 }
 
@@ -836,6 +857,12 @@ nav.primary {
     @include dropdown();
     li.mega {
         @include dropdown-mega();
+
+        a {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+        }
     }
 }
 

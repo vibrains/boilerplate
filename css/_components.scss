@@ -33,8 +33,8 @@ $large: 1024px;
             color: $plain-text;
             cursor: pointer;
             font-size: 1em;
-            margin-top: .5em;
-            padding: .5em 1em;
+            margin-top: 0.5em;
+            padding: 0.5em 1em;
             position: relative;
             text-align: left;
             width: 100%;
@@ -473,14 +473,13 @@ $large: 1024px;
     }
     .actions {
         text-align: center;
-
     }
     @media only screen and (min-width: $medium) {
         .actions {
             align-items: center;
             display: flex;
-            justify-content: space-between;
             flex-flow: row wrap;
+            justify-content: space-between;
             > * {
                 margin: 0;
                 padding: 0;
@@ -513,7 +512,7 @@ $large: 1024px;
     padding: 1rem;
     position: fixed;
     top: 0;
-    transition: transform .25s;
+    transition: transform 0.25s;
     width: 80%;
     z-index: 1000;
     &.left {
@@ -528,7 +527,7 @@ $large: 1024px;
     }
     &.open {
         transform: translateX(0);
-        transition: transform .25s;
+        transition: transform 0.25s;
     }
     &.init {
         display: block;
@@ -551,14 +550,13 @@ $large: 1024px;
         margin-bottom: 0;
         text-align: left;
         a {
-            color: #fff;
+            color: #FFF;
             display: block;
             padding: 1rem 0;
         }
         i.fa {
             display: inline-block;
         }
-
     }
     @media only screen and (min-width: $large) {
         &.open.left {
@@ -598,7 +596,7 @@ $large: 1024px;
     }
     li.active a {
         background-color: $brand-blue;
-        color: #fff;
+        color: #FFF;
         cursor: default;
         pointer-events: none;
         &::before,
@@ -606,8 +604,8 @@ $large: 1024px;
             background-color: $brand-blue;
         }
         &:hover {
-            color: #fff;
             background-color: $link-hover;
+            color: #FFF;
             &::before,
             &::after {
                 background-color: $link-hover;
@@ -677,7 +675,7 @@ $large: 1024px;
             span {
                 background-color: $brand-dark-blue;
                 border-radius: 0.5rem;
-                color: #fff;
+                color: #FFF;
                 display: inline-block;
                 margin: 0 0.5rem 0.5rem 0;
                 padding: 0.5rem 1rem;
@@ -693,8 +691,8 @@ $large: 1024px;
 
     ul {
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
         li {
             border-top: 4px solid $border;
             margin-bottom: 0;
@@ -731,7 +729,7 @@ $large: 1024px;
 @mixin sticky-header() {
     position: fixed;
     top: 0;
-    transition: top 0.16s cubic-bezier(0, .40, .70, 1);
+    transition: top 0.16s cubic-bezier(0, 0.40, 0.70, 1);
     width: 100%;
     z-index: 100;
 }
@@ -814,7 +812,7 @@ $large: 1024px;
     }
     blockquote {
         border: none;
-        color: #fff;
+        color: #FFF;
         font-size: 1.125rem;
         margin-bottom: 1rem;
         padding: 0 2.5rem;
@@ -833,10 +831,10 @@ $large: 1024px;
             top: 0;
         }
         &::after {
+            bottom: 0;
             content: "”";
             line-height: 0;
             right: 0;
-            bottom: 0;
         }
         ~ p {
             color: $meta-text;

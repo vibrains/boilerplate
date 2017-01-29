@@ -191,6 +191,46 @@
  * Emmet: .tiles>.tiles
  *
  **/
+.c-test {
+  -webkit-align-items: center;
+          align-items: center;
+  background-color: lightgrey;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-flex;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  height: 400px;
+  -webkit-justify-content: center;
+          justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 400px;
+}
+
+.c-test-inner {
+  background-color: red;
+  height: calc(100% - 50px);
+  height: -webkit-calc(100% - 50px);
+  position: absolute;
+  -webkit-transform: translateZ(50px) scale(0.5);
+  transform: translateZ(50px) scale(0.5);
+  transition: 0.15s;
+  width: calc(100% - 50px);
+  width: -webkit-calc(100% - 50px);
+  will-change: transform;
+}
+
+.c-test-inner:hover {
+  -webkit-transform: translateZ(100px) scale(0.7);
+  transform: translateZ(100px) scale(0.7);
+}
+
 /* = Variables = */
 /* Grays */
 /* The brand colors (name them the color) */
@@ -206,18 +246,100 @@
  *   - typographical elements: del, dfn, ins, kbd, mark, s, small, wbr
  *   - HTML5 elements: col, colgroup, details, dialog, map, menu, menuitem, summary
  */
-a, abbr, address, article, aside, audio, b, blockquote, body, button, canvas, caption, cite, code, datalist, dd, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, hr, i, iframe, img, input, label, legend, li, main, meter, nav, object, ol, option, p, pre, progress, q, section, select, span, strong, sub, sup, table, tbody, td, textarea, tfoot, th, thead, tr, u, ul, video {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+a,
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+button,
+canvas,
+caption,
+cite,
+code,
+datalist,
+dd,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+hr,
+i,
+iframe,
+img,
+input,
+label,
+legend,
+li,
+main,
+meter,
+nav,
+object,
+ol,
+option,
+p,
+pre,
+progress,
+q,
+section,
+select,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+tr,
+u,
+ul,
+video {
   border: 0;
-  outline: 0;
-  font-size: 100%;
+  box-sizing: border-box;
   font: inherit;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
   vertical-align: baseline;
 }
 
-article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, video {
+article,
+aside,
+audio,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+video {
   display: block;
 }
 
@@ -371,9 +493,9 @@ nav li {
 nav a {
   color: #FFF;
   display: block;
-  padding: 0 0.5rem;
   font-size: 12px;
   font-weight: 700;
+  padding: 0 0.5rem;
   text-transform: uppercase;
 }
 
@@ -408,9 +530,9 @@ nav.utility a {
   padding: 1rem;
   position: fixed;
   top: 0;
-  transition: -webkit-transform .25s;
-  transition: transform .25s;
-  transition: transform .25s, -webkit-transform .25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
   width: 80%;
   z-index: 1000;
 }
@@ -432,9 +554,9 @@ nav.utility a {
 .mobile.open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  transition: -webkit-transform .25s;
-  transition: transform .25s;
-  transition: transform .25s, -webkit-transform .25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
 .mobile.init {
@@ -465,7 +587,7 @@ nav.utility a {
 }
 
 .mobile ul li a {
-  color: #fff;
+  color: #FFF;
   display: block;
   padding: 1rem 0;
 }
@@ -494,13 +616,13 @@ nav.utility a {
   padding: 1rem;
   position: fixed;
   top: 0;
-  transition: -webkit-transform .25s;
-  transition: transform .25s;
-  transition: transform .25s, -webkit-transform .25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
   width: 80%;
   z-index: 1000;
-  z-index: 1001;
   background: #262626;
+  z-index: 1001;
 }
 
 .header-content > .dropdown.left {
@@ -520,9 +642,9 @@ nav.utility a {
 .header-content > .dropdown.open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  transition: -webkit-transform .25s;
-  transition: transform .25s;
-  transition: transform .25s, -webkit-transform .25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
 .header-content > .dropdown.init {
@@ -553,7 +675,7 @@ nav.utility a {
 }
 
 .header-content > .dropdown ul li a {
-  color: #fff;
+  color: #FFF;
   display: block;
   padding: 1rem 0;
 }
@@ -574,29 +696,29 @@ nav.utility a {
 }
 
 .header-content > .dropdown.sub-menu {
-  z-index: 1002;
   background: #333333;
+  z-index: 1002;
 }
 
 .desktop {
-  display: none;
-  -webkit-flex-flow: column wrap;
-          flex-flow: column wrap;
   -webkit-align-items: flex-end;
           align-items: flex-end;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
+  display: none;
   -webkit-flex-basis: 80%;
           flex-basis: 80%;
+  -webkit-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
   max-width: 80%;
 }
 
 .desktop nav.primary {
+  -webkit-align-self: flex-end;
+          align-self: flex-end;
   -webkit-flex-basis: 70%;
           flex-basis: 70%;
   max-width: 70%;
-  -webkit-align-self: flex-end;
-          align-self: flex-end;
 }
 
 .desktop .utilities {
@@ -606,19 +728,19 @@ nav.utility a {
 }
 
 .header-content {
+  -webkit-align-items: flex-end;
+          align-items: flex-end;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-align-items: flex-end;
-          align-items: flex-end;
   -webkit-justify-content: space-between;
           justify-content: space-between;
 }
 
 form.search {
-  display: -webkit-flex;
   display: flex;
+  display: -webkit-flex;
 }
 
 form.search .text,
@@ -662,8 +784,8 @@ form.search input {
 
 .hero {
   background: #191919 url(../img/hero.jpg) no-repeat center top/cover;
-  display: -webkit-flex;
   display: flex;
+  display: -webkit-flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 240px;
@@ -696,12 +818,12 @@ main section .services {
 }
 
 main section .services p {
-  text-align: center;
   color: white;
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
   font-size: 12px;
+  margin: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 aside.primary {
@@ -1457,9 +1579,9 @@ nav.primary li.mega {
 }
 
 nav.primary li.mega a {
-  text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .features > * {
@@ -1640,7 +1762,7 @@ header.primary {
 .listing form .filters span {
   background-color: #0C508A;
   border-radius: 0.5rem;
-  color: #fff;
+  color: #FFF;
   display: inline-block;
   margin: 0 0.5rem 0.5rem 0;
   padding: 0.5rem 1rem;
@@ -1656,8 +1778,8 @@ header.primary {
 
 .listing ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .listing ul li {
@@ -1706,10 +1828,10 @@ header.primary {
             align-items: center;
     display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-between;
-            justify-content: space-between;
     -webkit-flex-flow: row wrap;
             flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
   }
   .login .actions > * {
     margin: 0;
@@ -1757,7 +1879,7 @@ nav.pagination li:not(:last-child) a {
 
 nav.pagination li.active a {
   background-color: #0C96DD;
-  color: #fff;
+  color: #FFF;
   cursor: default;
   pointer-events: none;
 }
@@ -1767,8 +1889,8 @@ nav.pagination li.active a::before, nav.pagination li.active a::after {
 }
 
 nav.pagination li.active a:hover {
-  color: #fff;
   background-color: #EB7424;
+  color: #FFF;
 }
 
 nav.pagination li.active a:hover::before, nav.pagination li.active a:hover::after {
@@ -1895,7 +2017,7 @@ header.primary {
 
 .testimonial blockquote {
   border: none;
-  color: #fff;
+  color: #FFF;
   font-size: 1.125rem;
   margin-bottom: 1rem;
   padding: 0 2.5rem;
@@ -1917,10 +2039,10 @@ header.primary {
 }
 
 .testimonial blockquote::after {
+  bottom: 0;
   content: "”";
   line-height: 0;
   right: 0;
-  bottom: 0;
 }
 
 .testimonial blockquote ~ p {
@@ -2006,8 +2128,8 @@ header.primary {
   color: #191919;
   cursor: pointer;
   font-size: 1em;
-  margin-top: .5em;
-  padding: .5em 1em;
+  margin-top: 0.5em;
+  padding: 0.5em 1em;
   position: relative;
   text-align: left;
   width: 100%;

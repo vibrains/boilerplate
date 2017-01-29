@@ -22,19 +22,20 @@
  * Print Styles
  */
 
- @import "_components";
+@import "_components";
+@import "_tilt";
 
 /* = Variables = */
 $font-stack: "Helvetica Neue", Arial, sans-serif;
 
 
 /* Grays */
-$white:     #FFF;
+$white: #FFF;
 $lightgray: #DDD;
-$gray:      #808080;
-$darkgray:  #4A4A4A;
-$charcoal:  #191919;
-$black:     #000;
+$gray: #808080;
+$darkgray: #4A4A4A;
+$charcoal: #191919;
+$black: #000;
 
 /* The brand colors (name them the color) */
 $brand-blue: #0C96DD;
@@ -188,18 +189,100 @@ $large: 1024px;
  *   - typographical elements: del, dfn, ins, kbd, mark, s, small, wbr
  *   - HTML5 elements: col, colgroup, details, dialog, map, menu, menuitem, summary
  */
- a, abbr, address, article, aside, audio, b, blockquote, body, button, canvas, caption, cite, code, datalist, dd, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, hr, i, iframe, img, input, label, legend, li, main, meter, nav, object, ol, option, p, pre, progress, q, section, select, span, strong, sub, sup, table, tbody, td, textarea, tfoot, th, thead, tr, u, ul, video {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+a,
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+button,
+canvas,
+caption,
+cite,
+code,
+datalist,
+dd,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+hr,
+i,
+iframe,
+img,
+input,
+label,
+legend,
+li,
+main,
+meter,
+nav,
+object,
+ol,
+option,
+p,
+pre,
+progress,
+q,
+section,
+select,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+tr,
+u,
+ul,
+video {
     border: 0;
-    outline: 0;
-    font-size: 100%;
+    box-sizing: border-box;
     font: inherit;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
     vertical-align: baseline;
 }
 
-article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, video {
+article,
+aside,
+audio,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+video {
     display: block;
 }
 
@@ -288,9 +371,9 @@ nav {
     a {
         color: #FFF;
         display: block;
-        padding: 0 0.5rem;
         font-size: 12px;
         font-weight: 700;
+        padding: 0 0.5rem;
         text-transform: uppercase;
     }
 }
@@ -324,27 +407,27 @@ nav.utility {
 
 .header-content > .dropdown {
     @include mobileNavigation;
-    z-index: 1001;
-    background: lighten($charcoal, 5%);
-    &.sub-menu {
-        z-index: 1002;
-        background: lighten($charcoal, 10%);
-    }
 
+    background: lighten($charcoal, 5%);
+    z-index: 1001;
+    &.sub-menu {
+        background: lighten($charcoal, 10%);
+        z-index: 1002;
+    }
 }
 
 .desktop {
-    display: none;
-    flex-flow: column wrap;
     align-items: flex-end;
-    justify-content: space-between;
+    display: none;
     flex-basis: 80%;
+    flex-flow: column wrap;
+    justify-content: space-between;
     max-width: 80%;
 
     nav.primary {
+        align-self: flex-end;
         flex-basis: 70%;
         max-width: 70%;
-        align-self: flex-end;
     }
     .utilities {
         flex-basis: 30%;
@@ -353,15 +436,15 @@ nav.utility {
 }
 
 .header-content {
+    align-items: flex-end;
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-end;
     justify-content: space-between;
 }
 
 form.search {
-    display: -webkit-flex;
     display: flex;
+    display: -webkit-flex;
     .text,
     .submit {
         margin-bottom: 0;
@@ -387,8 +470,8 @@ form.search {
 
 .hero {
     background: $plain-text url(../img/hero.jpg) no-repeat center top / cover;
-    display: -webkit-flex;
     display: flex;
+    display: -webkit-flex;
     -webkit-flex-direction: column;
     flex-direction: column;
     height: 240px;
@@ -414,12 +497,12 @@ main section {
         background: green;
 
         & p {
-            text-align: center;
             color: white;
-            margin: 0;
-            padding-top: 20px;
-            padding-bottom: 20px;
             font-size: 12px;
+            margin: 0;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            text-align: center;
         }
     }
 }
@@ -737,6 +820,7 @@ input[type="radio"] {
 
 a.button {
     @include button;
+
     margin-bottom: 0;
 }
 
@@ -745,6 +829,7 @@ input[type="button"]:not(.link),
 input[type="reset"]:not(.link),
 input[type="submit"]:not(.link) {
     @include button;
+
     border: none;
     cursor: pointer;
 }
@@ -755,6 +840,7 @@ input[type="button"].link,
 input[type="reset"].link,
 input[type="submit"].link {
     @include link;
+
     background: transparent;
 }
 
@@ -859,9 +945,9 @@ nav.primary {
         @include dropdown-mega();
 
         a {
-            text-transform: uppercase;
             font-size: 12px;
             font-weight: 700;
+            text-transform: uppercase;
         }
     }
 }

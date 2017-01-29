@@ -181,6 +181,12 @@
             </div>
         </div>
 
+        <div class="js-parent">
+            <div class="c-test js-tilt">
+                <button>CALL TO ACTION</button>
+            </div>
+        </div>
+
         <div class="torso">
             <div class="container">
                 <aside class="primary">
@@ -601,11 +607,36 @@
     <script src="js/mobileNavigation.plugin.js" type="text/javascript"></script>
     <script src="js/dropdown.plugin.js"></script>
     <script src="js/stickyHeader.plugin.js"></script>
+    <script src="js/tilt.js"></script>
     <script>
         $(function () {
             $('header.primary').stickyHeader();
             $('nav.primary').dropdown();
         });
     </script>
+
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".js-tilt"), {
+            speed: 400,
+            max: 50,
+            perspective: 800
+        });
+        var element = document.querySelector(".c-test");
+        document.querySelector(".js-destroy").addEventListener("click", function () {
+            element.vanillaTilt.destroy();
+        });
+        document.querySelector(".js-getvalue").addEventListener("click", function () {
+            console.log(element.vanillaTilt.getValues());
+        });
+        document.querySelector(".js-reset").addEventListener("click", function () {
+            element.vanillaTilt.reset();
+        });
+    /*
+     element.addEventListener("tiltChange", function (event) {
+     console.log(event.detail);
+     });
+     */
+ </script>
+
 </body>
 </html>

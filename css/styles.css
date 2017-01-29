@@ -276,7 +276,7 @@ img {
   display: none;
 }
 
-@media only screen and (min-width: 669px) {
+@media only screen and (min-width: 768px) {
   .columns {
     display: table;
     table-layout: fixed;
@@ -1351,7 +1351,7 @@ table tr:nth-child(even) td {
   margin-bottom: 2rem;
 }
 
-@media only screen and (min-width: 669px) {
+@media only screen and (min-width: 768px) {
   .dossier > * {
     display: -webkit-flex;
     display: flex;
@@ -1700,7 +1700,7 @@ header.primary {
   text-align: center;
 }
 
-@media only screen and (min-width: 669px) {
+@media only screen and (min-width: 768px) {
   .login .actions {
     -webkit-align-items: center;
             align-items: center;
@@ -1975,7 +1975,7 @@ header.primary {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 669px) {
+@media only screen and (min-width: 768px) {
   .tiles {
     display: -webkit-flex;
     display: flex;
@@ -2060,7 +2060,7 @@ header.primary {
 }
 
 /* = Media Queries = */
-@media only screen and (min-width: 669px) {
+@media only screen and (min-width: 768px) {
   /* = Layout = */
   aside.primary {
     float: right;

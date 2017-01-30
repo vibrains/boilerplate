@@ -192,38 +192,30 @@
  *
  **/
 .c-test {
-  -webkit-align-items: center;
-          align-items: center;
-  background-color: lightgrey;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
   display: -webkit-flex;
   display: flex;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  height: 400px;
+  -webkit-align-items: center;
+          align-items: center;
   -webkit-justify-content: center;
           justify-content: center;
-  margin: 0 auto;
-  position: relative;
+  background-color: lightgrey;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  width: 400px;
 }
 
 .c-test-inner {
-  background-color: red;
-  height: calc(100% - 50px);
-  height: -webkit-calc(100% - 50px);
+  will-change: transform;
+  transition: .15s;
   position: absolute;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  background-color: red;
   -webkit-transform: translateZ(50px) scale(0.5);
   transform: translateZ(50px) scale(0.5);
-  transition: 0.15s;
-  width: calc(100% - 50px);
-  width: -webkit-calc(100% - 50px);
-  will-change: transform;
 }
 
 .c-test-inner:hover {

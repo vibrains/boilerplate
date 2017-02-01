@@ -22,11 +22,14 @@
  * Print Styles
  */
 
-@import "_components";
-@import "_tilt";
+ @import "_components";
+ @import "_tilt";
+ @import "_slick";
+ @import "_ripple";
+// @import "_font-awesome";
 
 /* = Variables = */
-$font-stack: "Helvetica Neue", Arial, sans-serif;
+$font-stack: "Dosis", Arial, sans-serif;
 
 
 /* Grays */
@@ -189,76 +192,76 @@ $large: 1024px;
  *   - typographical elements: del, dfn, ins, kbd, mark, s, small, wbr
  *   - HTML5 elements: col, colgroup, details, dialog, map, menu, menuitem, summary
  */
-a,
-abbr,
-address,
-article,
-aside,
-audio,
-b,
-blockquote,
-body,
-button,
-canvas,
-caption,
-cite,
-code,
-datalist,
-dd,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-hr,
-i,
-iframe,
-img,
-input,
-label,
-legend,
-li,
-main,
-meter,
-nav,
-object,
-ol,
-option,
-p,
-pre,
-progress,
-q,
-section,
-select,
-span,
-strong,
-sub,
-sup,
-table,
-tbody,
-td,
-textarea,
-tfoot,
-th,
-thead,
-tr,
-u,
-ul,
-video {
+ a,
+ abbr,
+ address,
+ article,
+ aside,
+ audio,
+ b,
+ blockquote,
+ body,
+ button,
+ canvas,
+ caption,
+ cite,
+ code,
+ datalist,
+ dd,
+ div,
+ dl,
+ dt,
+ em,
+ embed,
+ fieldset,
+ figcaption,
+ figure,
+ footer,
+ form,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ header,
+ hgroup,
+ html,
+ hr,
+ i,
+ iframe,
+ img,
+ input,
+ label,
+ legend,
+ li,
+ main,
+ meter,
+ nav,
+ object,
+ ol,
+ option,
+ p,
+ pre,
+ progress,
+ q,
+ section,
+ select,
+ span,
+ strong,
+ sub,
+ sup,
+ table,
+ tbody,
+ td,
+ textarea,
+ tfoot,
+ th,
+ thead,
+ tr,
+ u,
+ ul,
+ video {
     border: 0;
     box-sizing: border-box;
     font: inherit;
@@ -443,8 +446,8 @@ nav.utility {
 }
 
 form.search {
-    display: flex;
     display: -webkit-flex;
+    display: flex;
     .text,
     .submit {
         margin-bottom: 0;
@@ -470,8 +473,8 @@ form.search {
 
 .hero {
     background: $plain-text url(../img/hero.jpg) no-repeat center top / cover;
-    display: flex;
     display: -webkit-flex;
+    display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
     height: 240px;
@@ -714,9 +717,33 @@ pre {
 }
 
 code {
-    color: #FBCE78;
-    font-family: "Consolas", monospace;
-    padding: 2px 4px;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: "monoco", courier, monospace;
+    background: #384047;
+    padding: 15px;
+    overflow: hidden;
+    overflow-x: scroll;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+
+    & span.comment {
+        color: #595959;
+    }
+
+    & span.function {
+        color: #5fcf80;
+    }
+
+    & span.ifthen {
+        color: #db5599;
+    }
+
+    & span.condition {
+        color: #7ba8ce;
+    }
 }
 
 

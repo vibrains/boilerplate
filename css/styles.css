@@ -199,8 +199,6 @@
   -webkit-box-pack: center;
   display: -webkit-flex;
   display: flex;
-  display: -ms-flexbox;
-  display: -webkit-box;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   height: 200px;
@@ -222,7 +220,6 @@
   transform: translateZ(50px) scale(0.5);
   transition: 0.15s;
   width: calc(100% - 50px);
-  width: -webkit-calc(100% - 50px);
   will-change: transform;
 }
 
@@ -259,8 +256,8 @@
 }
 
 .slick-list.dragging {
-  cursor: hand;
   cursor: pointer;
+  cursor: hand;
 }
 
 .slick-slider .slick-track,
@@ -504,21 +501,21 @@
 }
 
 .has-ripple {
-  position: relative;
   overflow: hidden;
+  position: relative;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
 .ripple {
-  display: block;
-  position: absolute;
-  pointer-events: none;
+  background: #FFF;
   border-radius: 50%;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+  position: absolute;
   -webkit-transform: scale(0);
   transform: scale(0);
-  background: #fff;
-  opacity: 1;
 }
 
 .ripple-animate {
@@ -1050,8 +1047,8 @@ nav.utility a {
 }
 
 form.search {
-  display: -webkit-flex;
   display: flex;
+  display: -webkit-flex;
 }
 
 form.search .text,
@@ -1095,8 +1092,8 @@ form.search input {
 
 .hero {
   background: #191919 url(../img/hero.jpg) no-repeat center top/cover;
-  display: -webkit-flex;
   display: flex;
+  display: -webkit-flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 240px;
@@ -1351,17 +1348,17 @@ pre {
 }
 
 code {
-  color: white;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-family: "monoco", courier, monospace;
   background: #384047;
-  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-family: "monoco", courier, monospace;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   overflow: hidden;
   overflow-x: scroll;
-  border-radius: 5px;
-  margin-top: 20px;
-  display: inline-block;
+  padding: 15px;
 }
 
 code span.comment {
@@ -1369,15 +1366,15 @@ code span.comment {
 }
 
 code span.function {
-  color: #5fcf80;
+  color: #5FCF80;
 }
 
 code span.ifthen {
-  color: #db5599;
+  color: #DB5599;
 }
 
 code span.condition {
-  color: #7ba8ce;
+  color: #7BA8CE;
 }
 
 /* = Forms = */

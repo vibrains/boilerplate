@@ -1603,7 +1603,7 @@ input[type="submit"].link[disabled] {
   margin-bottom: 2rem;
   padding: 1em 3em;
   position: relative;
-  background-color: #48AC2C;
+  background-color: green;
 }
 
 .success p:last-of-type,

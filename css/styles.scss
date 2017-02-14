@@ -26,6 +26,7 @@
 @import "_tilt";
 @import "_slick";
 @import "_ripple";
+@import "_simple-weather";
 // @import "_font-awesome";
 
 /* = Variables = */
@@ -446,8 +447,8 @@ nav.utility {
 }
 
 form.search {
-    display: flex;
     display: -webkit-flex;
+    display: flex;
     .text,
     .submit {
         margin-bottom: 0;
@@ -473,8 +474,8 @@ form.search {
 
 .hero {
     background: $plain-text url(../img/hero.jpg) no-repeat center top / cover;
-    display: flex;
     display: -webkit-flex;
+    display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
     height: 240px;

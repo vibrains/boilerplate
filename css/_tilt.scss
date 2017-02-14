@@ -3,9 +3,9 @@
     background-color: lightgrey;
     -webkit-box-align: center;
     -webkit-box-pack: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
     -ms-flex-align: center;
     -ms-flex-pack: center;
     height: 200px;
@@ -25,8 +25,8 @@
     transform: translateZ(50px) scale(0.5);
     -webkit-transition: 0.15s;
     transition: 0.15s;
-    width: -webkit-calc(100% - 50px);
     width: calc(100% - 50px);
+    width: -webkit-calc(100% - 50px);
     will-change: transform;
 }
 .c-test-inner:hover {

@@ -1,0 +1,24 @@
+#response {
+	color: blue;
+	display: block;
+}
+
+ul#results {
+	list-style-type: none;
+
+	& li {}
+
+	& .cityName {
+		display: inline-block;
+		font-weight: 900;
+	}
+
+	& .lat, .lng {
+		display: inline-block;
+	}
+
+	& .latitude {
+		border-bottom: 1px solid #CCC;
+		margin-bottom: 10px;
+	}
+}

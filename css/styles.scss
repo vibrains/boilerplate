@@ -27,6 +27,7 @@
 @import "_slick";
 @import "_ripple";
 @import "_simple-weather";
+@import "_request";
 // @import "_font-awesome";
 
 /* = Variables = */
@@ -447,8 +448,8 @@ nav.utility {
 }
 
 form.search {
-    display: -webkit-flex;
     display: flex;
+    display: -webkit-flex;
     .text,
     .submit {
         margin-bottom: 0;
@@ -474,8 +475,8 @@ form.search {
 
 .hero {
     background: $plain-text url(../img/hero.jpg) no-repeat center top / cover;
-    display: -webkit-flex;
     display: flex;
+    display: -webkit-flex;
     -webkit-flex-direction: column;
     flex-direction: column;
     height: 240px;
@@ -711,7 +712,7 @@ dd {
 }
 
 pre {
-    background-color: #4A4A4A;
+    // background-color: #4A4A4A;
     padding: 1em;
     white-space: pre-wrap;
     word-wrap: break-word;

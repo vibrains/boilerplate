@@ -199,8 +199,6 @@
   -webkit-box-pack: center;
   display: -webkit-flex;
   display: flex;
-  display: -ms-flexbox;
-  display: -webkit-box;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   height: 200px;
@@ -222,7 +220,6 @@
   transform: translateZ(50px) scale(0.5);
   transition: 0.15s;
   width: calc(100% - 50px);
-  width: -webkit-calc(100% - 50px);
   will-change: transform;
 }
 
@@ -259,8 +256,8 @@
 }
 
 .slick-list.dragging {
-  cursor: hand;
   cursor: pointer;
+  cursor: hand;
 }
 
 .slick-slider .slick-track,
@@ -543,20 +540,20 @@
 }
 
 @font-face {
-  font-family: 'weather';
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot");
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf") format("truetype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg") format("svg");
-  font-weight: normal;
+  font-family: "weather";
   font-style: normal;
+  font-weight: normal;
 }
 
 #weather {
   margin: 0 auto;
-  text-align: center;
-  text-transform: uppercase;
+  padding: 18px;
   position: absolute;
   right: 0;
-  padding: 18px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 i {
@@ -776,16 +773,39 @@ i {
 }
 
 #weather li {
-  background: rgba(255, 255, 255, 0.9);
   background: #FFF;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
-  font-size: 16px;
   display: inline-block;
+  font-size: 16px;
   padding: 5px;
 }
 
 #weather .currently {
   margin: 0 20px;
+}
+
+#response {
+  color: blue;
+  display: block;
+}
+
+ul#results {
+  list-style-type: none;
+}
+
+ul#results .cityName {
+  display: inline-block;
+  font-weight: 900;
+}
+
+ul#results .lat, ul#results .lng {
+  display: inline-block;
+}
+
+ul#results .latitude {
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 10px;
 }
 
 /* = Variables = */
@@ -1296,8 +1316,8 @@ nav.utility a {
 }
 
 form.search {
-  display: -webkit-flex;
   display: flex;
+  display: -webkit-flex;
 }
 
 form.search .text,
@@ -1341,8 +1361,8 @@ form.search input {
 
 .hero {
   background: #191919 url(../img/hero.jpg) no-repeat center top/cover;
-  display: -webkit-flex;
   display: flex;
+  display: -webkit-flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 240px;
@@ -1590,7 +1610,6 @@ dd {
 }
 
 pre {
-  background-color: #4A4A4A;
   padding: 1em;
   white-space: pre-wrap;
   word-wrap: break-word;

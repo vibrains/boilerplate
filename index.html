@@ -14,7 +14,6 @@
 <body>
     <div class="wrapper">
         <header class="primary">
-            <div id="weather"></div>
             <div class="container">
                 <div class="header-content">
                     <div class="branding">
@@ -174,6 +173,9 @@
         </header>
 
         <div class="hero">
+            <div class="weather-container">
+                <div id="weather"></div>
+            </div>
             <div class="copy">
                 <h1>
                     As Roma Updates Coming Soon!!!!
@@ -421,7 +423,7 @@
     });
 </script>
 
- <script>
+<script>
     $(function () {
         $('header.primary').stickyHeader();
         $('nav.primary').dropdown();
